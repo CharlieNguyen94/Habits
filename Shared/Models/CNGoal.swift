@@ -32,3 +32,14 @@ extension CNGoal {
 
 // MARK: - Identifiable
 extension CNGoal: Identifiable {}
+
+extension CNGoal {
+    var lastRecord: CNGoalRecord? {
+        records?.sorted { $0.date > $1.date }.first
+    }
+    
+    var isCompletedToday: Bool {
+        guard let lastRecord = lastRecord else { return false }
+        return Calendar.current.isDateInToday(lastRecord.date)
+    }
+}

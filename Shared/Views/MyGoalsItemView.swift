@@ -23,7 +23,7 @@ struct MyGoalsItemView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .aspectRatio(1, contentMode: .fill)
         .padding()
-        .background(Color(.systemBackground))
+        .background(goal.isCompletedToday ? Color.cnCompleted : Color.cnBackground)
         .cornerRadius(8.0)
         .shadow(color: .gray, radius: 3.0, x: 0.0, y: 0.0)
     }
@@ -41,8 +41,27 @@ struct MyGoalsItemView_Previews: PreviewProvider {
         goal.isRemoved = false
         return goal
     }
+    
+    static var comepletedGoal: CNGoal {
+        let context = PersistenceController.preview.container.viewContext
+        let goalRecord = CNGoalRecord(context: context)
+        goalRecord.date = Date()
+        let goal = CNGoal(context: context)
+        goal.id = UUID()
+        goal.icon = "🏃‍♂️"
+        goal.title = "Jogging"
+        goal.position = 0
+        goal.addedOn = Date()
+        goal.modifiedOn = Date()
+        goal.isRemoved = false
+        goal.records = [goalRecord]
+        return goal
+    }
     static var previews: some View {
-        MyGoalsItemView(goal: goal)
-            .previewLayout(.fixed(width: 160, height: 160))
+        Group {
+            MyGoalsItemView(goal: goal)
+            MyGoalsItemView(goal: comepletedGoal)
+        }
+        .previewLayout(.fixed(width: 160, height: 160))
     }
 }
