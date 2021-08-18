@@ -17,6 +17,8 @@
 		95BF147726CD31F10062DB84 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF145E26CD31F00062DB84 /* Persistence.swift */; };
 		95BF147826CD31F10062DB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BF145F26CD31F10062DB84 /* Assets.xcassets */; };
 		95BF147926CD31F10062DB84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BF145F26CD31F10062DB84 /* Assets.xcassets */; };
+		95BF148426CD39D30062DB84 /* CNGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF148326CD39D30062DB84 /* CNGoal.swift */; };
+		95BF148626CD3B430062DB84 /* CNGoalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF148526CD3B430062DB84 /* CNGoalRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		95BF146C26CD31F10062DB84 /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BF146E26CD31F10062DB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95BF146F26CD31F10062DB84 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		95BF148326CD39D30062DB84 /* CNGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNGoal.swift; sourceTree = "<group>"; };
+		95BF148526CD3B430062DB84 /* CNGoalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNGoalRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		95BF145926CD31F00062DB84 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				95BF148226CD398A0062DB84 /* Models */,
 				95BF145C26CD31F00062DB84 /* HabitsApp.swift */,
 				95BF145D26CD31F00062DB84 /* ContentView.swift */,
 				95BF145E26CD31F00062DB84 /* Persistence.swift */,
@@ -96,6 +101,15 @@
 				95BF146F26CD31F10062DB84 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		95BF148226CD398A0062DB84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95BF148326CD39D30062DB84 /* CNGoal.swift */,
+				95BF148526CD3B430062DB84 /* CNGoalRecord.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,8 @@
 				95BF147226CD31F10062DB84 /* HabitsApp.swift in Sources */,
 				95BF147626CD31F10062DB84 /* Persistence.swift in Sources */,
 				95BF147026CD31F10062DB84 /* Habits.xcdatamodeld in Sources */,
+				95BF148426CD39D30062DB84 /* CNGoal.swift in Sources */,
+				95BF148626CD3B430062DB84 /* CNGoalRecord.swift in Sources */,
 				95BF147426CD31F10062DB84 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
