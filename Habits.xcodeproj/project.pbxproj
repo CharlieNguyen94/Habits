@@ -28,6 +28,8 @@
 		95BF149326CD44600062DB84 /* GoalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF149126CD44600062DB84 /* GoalIcon.swift */; };
 		95BF149C26CD44E80062DB84 /* AddNewGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF149B26CD44E80062DB84 /* AddNewGoalView.swift */; };
 		95BF149D26CD44E80062DB84 /* AddNewGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF149B26CD44E80062DB84 /* AddNewGoalView.swift */; };
+		95BF149F26CD49A80062DB84 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF149E26CD49A80062DB84 /* DataManager.swift */; };
+		95BF14A026CD49A80062DB84 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF149E26CD49A80062DB84 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		95BF148E26CD43BA0062DB84 /* AddNewGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoalViewModel.swift; sourceTree = "<group>"; };
 		95BF149126CD44600062DB84 /* GoalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalIcon.swift; sourceTree = "<group>"; };
 		95BF149B26CD44E80062DB84 /* AddNewGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoalView.swift; sourceTree = "<group>"; };
+		95BF149E26CD49A80062DB84 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 				95BF148726CD3C250062DB84 /* Persistence+Preview.swift */,
 				95BF145E26CD31F00062DB84 /* Persistence.swift */,
 				95BF149126CD44600062DB84 /* GoalIcon.swift */,
+				95BF149E26CD49A80062DB84 /* DataManager.swift */,
 				95BF145F26CD31F10062DB84 /* Assets.xcassets */,
 				95BF145A26CD31F00062DB84 /* Habits.xcdatamodeld */,
 			);
@@ -245,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95BF148F26CD43BA0062DB84 /* AddNewGoalViewModel.swift in Sources */,
+				95BF149F26CD49A80062DB84 /* DataManager.swift in Sources */,
 				95BF147226CD31F10062DB84 /* HabitsApp.swift in Sources */,
 				95BF147626CD31F10062DB84 /* Persistence.swift in Sources */,
 				95BF149C26CD44E80062DB84 /* AddNewGoalView.swift in Sources */,
@@ -269,6 +274,7 @@
 				95BF148B26CD3FE60062DB84 /* MyGoalsItemView.swift in Sources */,
 				95BF147726CD31F10062DB84 /* Persistence.swift in Sources */,
 				95BF147126CD31F10062DB84 /* Habits.xcdatamodeld in Sources */,
+				95BF14A026CD49A80062DB84 /* DataManager.swift in Sources */,
 				95BF147526CD31F10062DB84 /* MyGoalsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

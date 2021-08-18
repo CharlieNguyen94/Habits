@@ -9,11 +9,18 @@ import Foundation
 
 final class AddNewGoalViewModel: ObservableObject {
     @Published var title = ""
-    @Published var icon: String?
+    @Published var icon = GoalIcon.all[0]
     
     let icons: [String] = GoalIcon.all
     
+    private let dataManager: GoalDataManagerProtocol
+    
+    init(dataManager: GoalDataManagerProtocol = DataManager.shared) {
+        self.dataManager = dataManager
+    }
+    
     func save() {
-        fatalError("To be implemented")
+        guard !title.isEmpty else { return }
+        dataManager.createGoal(title: title, icon: icon)
     }
 }

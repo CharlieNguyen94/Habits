@@ -12,6 +12,8 @@ struct MyGoalsView: View {
     @FetchRequest(fetchRequest: CNGoal.fetchRequest(), animation: .default)
     private var goals: FetchedResults<CNGoal>
     
+    @State private var showingAddNew = false
+    
     private var columns: [GridItem] { [GridItem(.adaptive(minimum: 100, maximum: 160), spacing: 10.0)] }
 
 
@@ -32,7 +34,19 @@ struct MyGoalsView: View {
                 }
             }
             .navigationTitle("Goals")
+            .navigationBarItems(trailing: addNewButton)
         }
+        .sheet(isPresented: $showingAddNew) {
+            AddNewGoalView()
+        }
+    }
+    
+    private var addNewButton: some View {
+        Button(action: {
+            showingAddNew = true
+        }, label: {
+            Text("New Goal")
+        })
     }
 
     
