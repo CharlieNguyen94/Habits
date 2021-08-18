@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CNGoal" representedClassName="CNGoal" syncable="YES">
+        <attribute name="addedOn" attributeType="Date" defaultDateTimeInterval="650982420" usesScalarValueType="NO"/>
+        <attribute name="icon" attributeType="String" defaultValueString=""/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isRemoved" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="modifiedOn" attributeType="Date" defaultDateTimeInterval="650982480" usesScalarValueType="NO"/>
+        <attribute name="position" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CNGoalRecord" inverseName="goal" inverseEntity="CNGoalRecord"/>
+    </entity>
+    <entity name="CNGoalRecord" representedClassName="CNGoalRecord" syncable="YES">
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="650982600" usesScalarValueType="NO"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CNGoal" inverseName="records" inverseEntity="CNGoal"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="CNGoal" positionX="-63" positionY="-9" width="128" height="149"/>
+        <element name="CNGoalRecord" positionX="-54" positionY="54" width="128" height="59"/>
     </elements>
 </model>
