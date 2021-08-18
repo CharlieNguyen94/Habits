@@ -13,7 +13,7 @@ struct HabitsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyGoalsView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
