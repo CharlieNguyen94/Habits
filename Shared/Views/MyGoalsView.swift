@@ -9,14 +9,19 @@ import SwiftUI
 import CoreData
 
 struct MyGoalsView: View {
+    @Environment(\.managedObjectContext) private var context
+    
+    @StateObject var viewModel = MyGoalsViewModel()
+    
+    
     @FetchRequest(fetchRequest: CNGoal.fetchRequest(), animation: .default)
     private var goals: FetchedResults<CNGoal>
     
     @State private var showingAddNew = false
     
     private var columns: [GridItem] { [GridItem(.adaptive(minimum: 100, maximum: 160), spacing: 10.0)] }
-
-
+    
+    
     var body: some View {
         NavigationView {
             Group {
@@ -26,7 +31,11 @@ struct MyGoalsView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 10.0) {
                             ForEach(goals) { goal in
-                                MyGoalsItemView(goal: goal)
+                                Button {
+                                    viewModel.markAsDone(goal)
+                                } label: {
+                                    MyGoalsItemView(goal: goal)
+                                }
                             }
                         }
                         .padding(10)
@@ -48,13 +57,16 @@ struct MyGoalsView: View {
             Text("New Goal")
         })
     }
-
+    
     
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var dataManager: DataManagerProtocol {
+        DataManager(persistenceController: .preview)
+    }
     static var previews: some View {
-        MyGoalsView()
+        MyGoalsView(viewModel: MyGoalsViewModel(dataManager: dataManager))
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
