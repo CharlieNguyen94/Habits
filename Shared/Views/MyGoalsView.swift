@@ -36,6 +36,9 @@ struct MyGoalsView: View {
                                 } label: {
                                     MyGoalsItemView(goal: goal)
                                 }
+                                .contextMenu {
+                                    contextMenuItems(for: goal)
+                                }
                             }
                         }
                         .padding(10)
@@ -49,6 +52,28 @@ struct MyGoalsView: View {
             AddNewGoalView()
         }
     }
+    
+    @ViewBuilder
+    private func contextMenuItems(for goal: CNGoal) -> some View {
+        if goal.isCompletedToday {
+            Button {
+                viewModel.unmarkAsDone(goal)
+            } label: {
+                Label("Not completed", systemImage: "arrow.uturn.backward")
+            }
+        }
+        Button {
+            // Nothing for now
+        } label: {
+            Label("Edit", systemImage: "pencil")
+        }
+        Divider()
+        Button {
+            // Nothing for now
+        } label: {
+            Label("Delete", systemImage: "trash")
+    }
+}
     
     private var addNewButton: some View {
         Button(action: {
