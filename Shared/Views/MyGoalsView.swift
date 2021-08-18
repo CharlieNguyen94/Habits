@@ -16,13 +16,22 @@ struct MyGoalsView: View {
 
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 10.0) {
-                ForEach(goals) { goal in
-                    MyGoalsItemView(goal: goal)
+        NavigationView {
+            Group {
+                if goals.isEmpty {
+                    Text("No goals yet! 😔")
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 10.0) {
+                            ForEach(goals) { goal in
+                                MyGoalsItemView(goal: goal)
+                            }
+                        }
+                        .padding(10)
+                    }
                 }
             }
-            .padding(10)
+            .navigationTitle("Goals")
         }
     }
 
