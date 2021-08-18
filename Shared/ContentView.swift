@@ -9,10 +9,20 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @FetchRequest(fetchRequest: CNGoal.fetchRequest(), animation: .default)
+    private var goals: FetchedResults<CNGoal>
 
 
     var body: some View {
-        Text("Hello world")
+        List {
+            ForEach(goals) { goal in
+                HStack {
+                    Text(goal.icon)
+                    Text(goal.title)
+                    Spacer()
+                }
+            }
+        }
     }
 
     
