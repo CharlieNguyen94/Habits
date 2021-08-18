@@ -1,9 +1,8 @@
 # Tracking Daily Goal App
 ## Light Mode
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-18 at 16 59 55](https://user-images.githubusercontent.com/35964099/129931938-c88d80d3-8cdd-45c7-bd28-9721665d3c68.png)
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-18 at 16 59 55](https://user-images.githubusercontent.com/35964099/129933431-d7d9959e-fbe8-42d2-94ea-29ea40308bc4.png)
 ## Dark Mode
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-18 at 17 00 09](https://user-images.githubusercontent.com/35964099/129932046-19711d64-8929-4d2f-b5e2-51325ae55eb3.png)
-
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-08-18 at 17 00 09](https://user-images.githubusercontent.com/35964099/129933459-312e5ca7-27cb-4651-9e8e-ba3a811a1674.png)
 ## Architecture
 - SwiftUI
 - MVVM with Combine
