@@ -13,6 +13,7 @@
 - Mark goals as completed
 - Un-mark goals as not completed
 - Data is persisted
+- Supports light mode & dark mode
 
 ## Techniques & Technologies
 - Core Data
